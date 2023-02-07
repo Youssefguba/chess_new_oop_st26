@@ -1,5 +1,6 @@
 import 'chess_item.dart';
 import 'items/king.dart';
+import 'solider.dart';
 
 void main() {
   final chess = ChessItem(
@@ -10,10 +11,8 @@ void main() {
     isDead: false,
   );
 
-  print(chess.name);
-
 // king one
-  final king = King(
+  final kingOne = King(
     name: "King One",
     color: "hhhhhhhhhhh",
     position: "A1",
@@ -21,8 +20,11 @@ void main() {
     isDead: false,
   );
 
-  print('King one ${king.name}');
-  print(king.color);
+  print(King.username);
+  King.username = 'Player1';
+  King.username = 'Player2';
+
+  print(King.username);
 
 // king two
   King kingTwo = King(
@@ -33,20 +35,9 @@ void main() {
     isDead: false,
   );
 
-  print('king two ${kingTwo.name}');
-  print('king two color ${kingTwo.color}');
+  var soliderOne = Solider('Solider One');
 
-  print('steps before moving : ${king.steps}');
-  king.move(2);
-  print('steps after moving : ${king.steps}');
-
-  print('steps before moving : ${kingTwo.steps}');
-  kingTwo.move(5);
-  print('steps after moving : ${kingTwo.steps}');
-
-  print(king.toString());
-
-  var x = 5;
-
-
+  soliderOne.move = 1;
+  
+  print(soliderOne.getMyName);
 }
